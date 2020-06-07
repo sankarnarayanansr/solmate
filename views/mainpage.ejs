@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SolMate!</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="jumbotron">
+            <br><br>
+            <div class="heading">
+             <strong>Solmate</strong>
+            </div>
+            <div class="phrase">
+             <i>Solutions are always simple.</i>
+            </div>
+        </div>
+
+        <div class="container" id="cat">
+          <h4>Category All</h4>
+          <div class="tag all">Total ##</div> 
+          <div class="tag easy">Easy ##</div>   
+          <div class="tag medium">Medium ##</div> 
+          <div class="tag hard">Hard ## </div>   
+          <br><br>
+          <hr>
+        <!-- </div> -->
+        
+        <br><br>
+
+        <form>
+            <div class="form">
+              <input type="text" name="search" placeholder="Search for questions..." id="inp" onkeyup="searcher()" class="form-control">
+              <!-- <div class="dropdown">
+                <button class="dropbtn">Difficulty</button>
+                <div class="dropdown-content">
+                  <a href="#">Easy</a>
+                  <a href="#">Medium</a>
+                  <a href="#">Hard</a>
+                </div>
+              </div> -->
+              <br>
+              <select name="difficulty" id="">
+                <option value="" selected disabled >Difficulty</option>
+                <option value=""><a href="#">Easy</a></option>
+                <option value=""><a href="#">Medium</a></option>
+                <option value=""><a href="#">Hard</a></option>
+              </select>
+
+              <!-- <div class="div3">
+                <div class="dropdown">
+                  <button class="dropbtn">Tags</button>
+                  <div class="dropdown-content">
+                    <a class="dropdown-item" href="#">Strings</a>
+                    <a class="dropdown-item" href="#">Arrays</a>
+                    <a class="dropdown-item" href="#">Linked Lists</a>
+                    <a class="dropdown-item" href="#">Trees</a>
+                    <a class="dropdown-item" href="#">Greedy Algorithms</a>
+                    <a class="dropdown-item" href="#">Dynamic Programming</a>
+                  </div>
+                </div>
+
+              </div> -->
+              <select name="tags" id="">
+                <option value="" selected disabled>Tags</option>
+                <option value=""><a class="dropdown-item" href="#">Strings</a></option>
+                <option value=""><a class="dropdown-item" href="#">Arrays</a></option>
+                <option value=""><a class="dropdown-item" href="#">Linked Lists</a></option>
+                <option value=""><a class="dropdown-item" href="#">Trees</a></option>
+                <option value=""><a class="dropdown-item" href="#">Greedy Algorithms</a></option>
+                <option value=""><a class="dropdown-item" href="#">Dynamic Programming</a></option>
+              </select>
+            </div>
+              
+
+          </form>
+
+      <br>
+        
+      <!-- <div class="container"> -->
+        <hr>
+      <!-- </div> -->
+      
+      <!-- <div class="container"> -->
+        <br><br>
+      <table class="table table-hover" id="ctab">
+       
+          <tr>
+            <td> # </td>
+            <td>QUESTIONS</td>
+            <td>CATEGORY</td>
+            <td>DIFFICULTY</td>
+          </tr>
+        
+        
+          <tr>
+            <td> 1 </td>
+            <td><a href="lcs">Longest Common Subsequence</a></td>
+            <td> Dynamic Programming </td>
+            <td><span class="tag medium">Medium</span></td>
+          </tr>
+          <tr>
+            <td> 2 </td>
+            <td> Top View of a Tree</td>
+            <td> Data Structures</td>
+            <td><span class="tag easy">Easy</span></td>
+          </tr>
+          <tr>
+            <td> 3 </td>
+            <td> Longest Palindromic Substring</td>
+            <td> String </td>
+            <td> <span class="tag medium">Medium</span></td>
+          </tr>
+          <tr>
+            <td> 4 </td>
+            <td> Maximum subarray problem</td>
+            <td> Algorithms </td>
+            <td><span class="tag easy">Easy</span></td>
+          </tr>
+          <tr>
+            <td> 5 </td>
+            <td> Snake And Ladder problem</td>
+            <td> Graph </td>
+            <td><span class="tag hard">Hard</span></td>
+          </tr>
+        
+      </table>
+      </div>
+
+      <div class="footer">
+        &copy; All rights reserved
+      </div>
+    </body>
+</html>
+
+<script>
+function searcher() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("inp");
+          console.log(input)
+          filter = input.value.toUpperCase();
+          table = document.getElementById("ctab");
+          tr = table.getElementsByTagName("tr");
+          for (i = 1; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }       
+          }
+}
+</script>

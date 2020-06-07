@@ -1,0 +1,82 @@
+html,body{
+	/*background-color: #201066;*/
+	font-family: 'Noto Sans', sans-serif;
+	overflow-x: hidden;
+}
+
+#fullpage{
+	background-color: #f0f5f5;
+}
+
+.ip_op{
+	border: 2px solid lightgrey;
+	width: 75%;
+}
+
+.navbar-brand a{
+	height: 4.8 rem;
+	padding: 0.4 rem;
+}
+ #footer{
+ 	border-top:1px solid #0275d8;
+ 	background: #0275d8;
+ 	color:white;
+ 	text-align: center;
+ 	color:black;
+ }
+
+.easy{
+	border-radius: 25px;
+	background: green;
+	color:white;
+	text-align: center;
+	padding: 2px; 
+	height: 30px;
+	width:60px;
+}
+
+.medium{
+	border-radius: 25px;
+	background: orange;
+	color:white;
+	text-align: center;
+	padding: 2px; 
+	height: 30px;
+	width:100px;
+}
+
+.hard{
+	border-radius: 25px;
+	background: red;
+	color:white;
+	text-align: center;
+	padding: 2px; 
+	height: 30px;
+	width:60px;
+}
+
+pre{
+    white-space: pre-wrap;
+	background-color: lightgrey;
+	margin-bottom: -40px;
+}
+
+.comp{
+	border-radius:15px ;
+	border:1px solid black;
+	background: white;
+	margin:10px;
+}
+
+.algohead{
+	background-color: black;
+	color:white;
+	width:150px;
+}
+
+.algo{
+	border: 3px solid black;
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+
